@@ -1,5 +1,6 @@
 html {
     box-sizing: border-box;
+    font-size: 16px;
 }
 h1,h2,h3,h4,h5,h6 {
     margin-top: 0;
@@ -10,12 +11,15 @@ body{
     padding: 0rem;
     background-color: #fff;
     color: #0B172A;
-    font-size: 16px;
+    text-align: center;
 }
 header {
     background-color: #0B172A;
     color: #fff;
     height: fit-content;
+    padding: 1rem;
+    display: flex;
+    flex-flow: column wrap;
 }
 main {
     padding: 1rem;
@@ -31,6 +35,19 @@ footer {
 	margin: 0 4%;
 }
 
+header .slogan {
+    font-style: italic;
+}
+header .slogan-up{
+    display: none;
+}
+
+header img {
+    width: 9rem;
+    border: 2px solid #463940;
+    border-radius: 50%;
+}
+
 .general {
     display: flex;
     flex-direction: column;
@@ -38,11 +55,11 @@ footer {
 
 .skill {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
 }
 
 .skill-card {
-    flex: 0 0 28.5%;
+    flex: 0 0 30%;
     padding: 1rem;
     text-align: center;
 }
@@ -67,18 +84,46 @@ footer {
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 550px) { 
-    
+    header img {
+        width: 10rem;
+    }
   }
   /* Large devices (large desktops, 1200px and up) */
-  @media (min-width: 850px) { 
+@media (min-width: 850px) { 
+    html {
+        font-size: 20px;
+    }
+    body {
+        text-align: left;
+    }
     .general,
     .skill {
         flex-direction: row;
     }
     .col-3 {
-		flex: 0 0 68%;
+		flex: 0 1 60%;
     }
     .col-1-4 {
-		flex: 0 0 20%;
-	}
+		flex: 0 1 20%;
+    }
+    header {
+        flex-flow: row wrap;
+    }
+    header h1 {
+        font-size: 2.5rem;
+    }
+    header .col-3 {
+        align-self: center;
+        text-align: left;
+    }
+    header .slogan-up{
+        display: block;
+    }
+    header .slogan-down{
+        display: none;
+    }
+    header img {
+        width: 12rem;
+        flex: 0 0 33%
+    }
   }

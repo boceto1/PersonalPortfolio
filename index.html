@@ -4,6 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Jean Obando | Portfolio</title>
+    <script>
+        document.createElement("picture");
+    </script>
+    <script src="js/picturefill.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link
         href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap"
@@ -14,9 +18,16 @@
 
 <body>
     <header>
-        <h1>Hello, I'm Jean Karlo Obando</h1>
-        <h3>Software Developer and Community Enthusiast</h3>
-        <!-- Put Image Here -->
+        <div class="col-3">
+            <h1>Hello, I'm Jean Karlo Obando</h1>
+            <h3 class="slogan slogan-up">Software Developer and Community Enthusiast</h3>
+        </div>
+        <picture>
+            <source srcset="img/profile-original.png" media="(min-width: 1200px)">
+            <source srcset="img/profile-500.png" media="(min-width: 800px)">
+            <img src="img/profile-200.png" alt="Profile Photo">
+        </picture>
+        <h3 class="slogan slogan-down">Software Developer and Community Enthusiast</h3>
     </header>
     <main>
         <section class="general">
