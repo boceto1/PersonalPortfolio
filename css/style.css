@@ -53,15 +53,22 @@ header img {
     flex-direction: column;
 }
 
+.skills {
+    margin: 0;
+}
 .skill {
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: column wrap;
 }
 
 .skill-card {
-    flex: 0 0 30%;
+    flex: 0 0 28%;
     padding: 1rem;
     text-align: center;
+    border-top: 3px solid #0B172A;
+}
+.skill-card:last-child {
+    border-bottom: 3px solid #0B172A;
 }
 
 .skill-card:nth-child(odd) {
@@ -78,15 +85,30 @@ header img {
 }
 
 .skill-card li {
-    flex: 0 0 33%;
+    flex: 0 1 33%;
+    flex-basis: content;
     font-size: 0.75rem;
 }
+
+.skill-card img {
+    width: 3rem;
+}
+
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 550px) { 
     header img {
         width: 10rem;
     }
+    .skill {
+        flex-flow: row nowrap;
+    }
+    .skill-card {
+        border-bottom: 3px solid #0B172A;
+    }
+    .skill-card li {
+        font-size: 0.75rem;
+    }    
   }
   /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 850px) { 
@@ -95,10 +117,6 @@ header img {
     }
     body {
         text-align: left;
-    }
-    .general,
-    .skill {
-        flex-direction: row;
     }
     .col-3 {
 		flex: 0 1 60%;
@@ -126,4 +144,13 @@ header img {
         width: 12rem;
         flex: 0 0 33%
     }
+    .general {
+        flex-flow: row nowrap;
+    }
+    .skills {
+        text-align: center;
+    }
+    .skill-card li {
+        margin-bottom: 0.2rem;
+    }  
   }
