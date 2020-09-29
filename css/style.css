@@ -94,6 +94,53 @@ header img {
     width: 3rem;
 }
 
+.experience {
+    margin-top: 2rem;
+}
+
+.jobs {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+.job-item {
+    padding: 1rem;
+    border: 2px solid #463940;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 #463940;
+    margin: 1rem;
+    width: 70%;
+}
+.job-item h4,h5,h6 {
+    margin-bottom: 0.2rem;
+}
+.job-item:hover {
+    background-color: #463940;
+    color: #fff;
+}
+
+.job-item h4 {
+    font-weight: bold;
+}
+
+.experience a {
+    margin: 1rem;
+    padding: 0.6rem;
+    background-color: #BC4123;
+    border: 1px solid #BC4123;
+    box-shadow: 0 4px 8px 0 #111111;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: bold;
+    outline:none;
+    display: inline-block;
+    text-decoration: none;
+}
+.experience a:hover {
+    background-color: #463940;
+    border: 1px solid #463940;
+}
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 550px) { 
@@ -108,21 +155,32 @@ header img {
     }
     .skill-card li {
         font-size: 0.75rem;
+    }
+    .jobs {
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: stretch;
+    }
+    .job-item {
+        width: 50%;
     }    
+    .col-1-2-3 {
+        flex: 0 1 38%
+    } 
   }
   /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 850px) { 
     html {
         font-size: 20px;
     }
-    body {
-        text-align: left;
-    }
     .col-3 {
 		flex: 0 1 60%;
     }
     .col-1-4 {
 		flex: 0 1 20%;
+    }
+    .col-1-2-3 {
+        flex: 0 1 33%;
     }
     header {
         flex-flow: row wrap;
@@ -147,10 +205,16 @@ header img {
     .general {
         flex-flow: row nowrap;
     }
+    .general:first-child{
+        text-align: left;
+    }
     .skills {
         text-align: center;
     }
     .skill-card li {
         margin-bottom: 0.2rem;
-    }  
+    }
+    .jobs {
+        flex-wrap: nowrap;
+    }
   }
