@@ -21,9 +21,6 @@ header {
     display: flex;
     flex-flow: column wrap;
 }
-main {
-    padding: 1rem;
-}
 footer {
     background-color: #BC4123;
     text-align: center;
@@ -51,6 +48,7 @@ header img {
 .general {
     display: flex;
     flex-direction: column;
+    margin: 1rem;
 }
 
 .skills {
@@ -141,6 +139,24 @@ header img {
     background-color: #463940;
     border: 1px solid #463940;
 }
+.beyond {
+    padding: 1rem;
+    background-color: #0B172A;
+    color: #fff;
+}
+.gallery {
+    display: flex;
+    flex-flow: column nowrap;
+    align-content: center;
+    justify-content: center;
+}
+/* Display just the first element on mobile */
+.activity-card:nth-last-child(-n+3) {
+    display: none;
+}
+.activity-card img {
+    width: 50%;
+}
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 550px) { 
@@ -166,7 +182,18 @@ header img {
     }    
     .col-1-2-3 {
         flex: 0 1 38%
-    } 
+    }
+    .gallery {
+        flex-flow: row nowrap;
+        justify-content: center;
+    }
+    /* Display just two first elements on tablet */
+    .activity-card:nth-child(-n+2) {
+        display: block;
+    }
+    .activity-card {
+        width: 50%;
+    }
   }
   /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 850px) { 
@@ -217,4 +244,11 @@ header img {
     .jobs {
         flex-wrap: nowrap;
     }
+    /* Display all elements on desktop */
+    .activity-card:nth-child(n) {
+        display: block;
+    }
   }
+
+
+  
