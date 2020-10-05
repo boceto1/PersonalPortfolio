@@ -141,12 +141,14 @@ header img {
 }
 .beyond {
     padding: 1rem;
+    padding-bottom: 1.5rem;
     background-color: #0B172A;
     color: #fff;
 }
 .gallery {
     display: flex;
     flex-flow: column nowrap;
+    margin: auto 1.5rem;
 }
 .activity-card {
     margin: 1rem;
@@ -172,6 +174,31 @@ header img {
     border-radius: 0px 0px 10px 10px;
     bottom: 1.5rem; 
     width: inherit;
+}
+.cards {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+.arrow-left {
+    width: 0; 
+    height: 0; 
+    border-top: 1rem solid transparent;
+    border-bottom: 1rem solid transparent;  
+    border-right: 1rem solid #BC4123; 
+  }
+.arrow-left:hover {
+    border-right: 1rem solid #463940;
+}
+.arrow-right {
+    width: 0; 
+    height: 0; 
+    border-top: 1rem solid transparent;
+    border-bottom: 1rem solid transparent;
+    border-left: 1rem solid #BC4123;
+  }
+.arrow-right:hover {
+    border-left: 1rem solid #463940;
 }
 
 /* Small devices (tablets, 768px and up) */
