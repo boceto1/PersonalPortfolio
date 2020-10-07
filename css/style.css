@@ -25,6 +25,7 @@ footer {
     background-color: #BC4123;
     text-align: center;
     color: #fff;
+    height: 100%;
 }
 
 [class*="col-"] {
@@ -200,7 +201,18 @@ header img {
 .arrow-right:hover {
     border-left: 1rem solid #463940;
 }
-
+.social-media {
+    padding: 0.5rem;
+}
+.social-media img {
+    width: 1.3rem;
+    padding: 0.2rem;
+}
+footer p {
+    margin: 0;
+    padding-bottom: 0.5rem;
+    font-size: 0.625rem;
+}
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 550px) { 
     header img {

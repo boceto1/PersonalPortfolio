@@ -1,41 +1,27 @@
 const activitiesImages = [
-    'ciespal',
-    'innovasoft3',
-    'stackbuilders',
-    'techdays',
-    'lead',
-    'singer',
-    'coro'
+    {file: 'ciespal', label:`First Place "Conecta Culturas" Hackatón sponsored by Unesco` },
+    {file: 'innovasoft3', label: `First Place “Innovasoft 3” Challenge - UNACH University` },
+    {file: 'stackbuilders', label: `Winner of Code Challenge sponsored by Stackbuilders` },
+    {file: 'lead', label: `Software Club Leader - University of Army Forces (ESPE)`},
+    {file: 'techdays', label: `Organizer of "Tech Mañanas" MeetUp` },
+    {file: 'coro', label: `Member of ESPE Chorus for 3 years`},
+    {file: 'singer', label: `Amateur Singer`},
 ];
 
 var currentIndexActivities = [0,1,2,3,4,5,6];
 
-// 1 -- 2 -- 3 -- 4 -- 5 -- 6 --7
-
-// window.addEventListener("DOMContentLoaded", pageFullyLoaded, false);
-
-// function pageFullyLoaded(e) {
-
-//     // Use this to create a dinamic gallery
-//     const original = document.getElementById('original-1');
-//     const tablet = document.getElementById('tablet-1');
-//     const mobile = document.getElementById('mobile-1');
-    
-//     original.srcset = "img/activities/techdays-original.jpg";
-//     tablet.srcset = "img/activities/techdays-tablet.jpg"
-//     mobile.src = "img/activities/techdays-mobile.jpg"
-// }
-
-const updateActivityImageCard = (idCard, name) => {
+const updateActivityImageCard = (idCard, activity) => {
     //Charge html picture elements
     const original = document.getElementById(`original-${idCard}`);
     const tablet = document.getElementById(`tablet-${idCard}`);
     const mobile = document.getElementById(`mobile-${idCard}`);
+    const paragraph = document.getElementById(`paragraph-${idCard}`);
 
     // Update source of images
-    original.srcset = `img/activities/${name}-original.jpg`;
-    tablet.srcset = `img/activities/${name}-tablet.jpg`;
-    mobile.src = `img/activities/${name}-mobile.jpg`;
+    original.srcset = `img/activities/${activity.file}-original.jpg`;
+    tablet.srcset = `img/activities/${activity.file}-tablet.jpg`;
+    mobile.src = `img/activities/${activity.file}-mobile.jpg`;
+    paragraph.textContent = activity.label;
 }
 
 const moveActivityToRight = (currentIndex) => 
