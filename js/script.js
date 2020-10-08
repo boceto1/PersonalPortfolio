@@ -19,8 +19,8 @@ const updateActivityImageCard = (idCard, activity) => {
 
     // Update source of images
     original.srcset = `img/activities/${activity.file}-original.jpg`;
-    tablet.srcset = `img/activities/${activity.file}-tablet.jpg`;
-    mobile.src = `img/activities/${activity.file}-mobile.jpg`;
+    tablet.srcset = `img/activities/${activity.file}-original.jpg`;
+    mobile.src = `img/activities/${activity.file}-original.jpg`;
     paragraph.textContent = activity.label;
 }
 
