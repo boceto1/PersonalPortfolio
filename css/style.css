@@ -156,7 +156,6 @@ header img {
     display: flex;
     flex-flow: column nowrap;
     justify-content: stretch;
-    height: 35vh;
 }
 .activity-card:nth-last-child(-n+3) {
     display: none;
@@ -164,8 +163,6 @@ header img {
 .activity-card img {
     border-radius: 10px;
     width: 100%;
-    width: 100%;
-    height: 35vh;
 }
 .activity-card p {
     position: relative;
@@ -246,7 +243,7 @@ footer p {
     }
     /* Display just two first elements on tablet */
     .activity-card {
-        width: 33%;
+        width: 45%;
     }
     .activity-card:nth-child(-n+2) {
         display: block;
@@ -305,6 +302,9 @@ footer p {
         flex-wrap: nowrap;
     }
     /* Display all elements on desktop */
+    .activity-card {
+        width: 33%;
+    }
     .activity-card:nth-child(n) {
         display: block;
     }
