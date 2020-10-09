@@ -1,5 +1,5 @@
 const activitiesImages = [
-    {file: 'ciespal', label:`First Place "Conecta Culturas" Hackatón sponsored by Unesco` },
+    {file: 'unesco', label:`First Place "Conecta Culturas" Hackatón sponsored by Unesco` },
     {file: 'innovasoft3', label: `First Place “Innovasoft 3” Challenge - UNACH University` },
     {file: 'stackbuilders', label: `Winner of Code Challenge sponsored by Stackbuilders` },
     {file: 'lead', label: `Software Club Leader - University of Army Forces (ESPE)`},
