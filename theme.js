@@ -5,6 +5,7 @@ const theme = {
   colors: {
     ...roboto.colors,
     text: '#0B172A',
+    textSecondary: "#fff", 
     background: '#fff',
     primary: '#0B172A',
     secondary: '#BC4123'

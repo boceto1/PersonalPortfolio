@@ -1,8 +1,16 @@
-import { Console } from "console";
-import React from "react";
+import React, { useEffect } from "react";
+import { Header, Footer } from "../components";
 
-const Index = () =>  {
-  return (<h1>PERSONAL PORTFOLIO</h1>)
-}
+const Index = () => {
+  useEffect(() => {
+    document.title = "Jean Karlo Obando";
+  }, []);
+  return (
+    <>
+      <Header />
+      <Footer />
+    </>
+  );
+};
 
 export default Index;
