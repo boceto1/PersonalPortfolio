@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Header, Footer } from "../components";
+import { Header, Content, Footer } from "../components";
 
 const Index = () => {
   useEffect(() => {
@@ -8,6 +8,7 @@ const Index = () => {
   return (
     <>
       <Header />
+      <Content />
       <Footer />
     </>
   );
