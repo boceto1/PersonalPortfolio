@@ -3,6 +3,7 @@
 import { jsx } from "theme-ui";
 import { SkillCard } from "./SkillCard";
 import { ExperienceCard } from "./ExperienceCard";
+import { BeyondCarousel } from "./BeyondCarousel";
 import { skills, experience } from "../data/";
 
 export const Content: React.FC = () => (
@@ -70,7 +71,43 @@ export const Content: React.FC = () => (
           position={experience.position}
           date={experience.date}
           description={experience.description}
-        />)}</div>
+        />)}
+        </div>
+        <a  href="https://drive.google.com/file/d/1QkMvL6IREXQgGtCE4K6dP649pZkwuB0o/view?usp=sharing"
+                target="_blank"
+                sx={{
+                  margin: '1rem',
+                  padding: '0.6rem',
+                  backgroundColor: 'secondary',
+                  border: '1px solid #BC4123',
+                  boxShadow: '0 4px 8px 0 #111111',
+                  borderRadius: '10px',
+                  color: '#fff',
+                  fontWeight: 'bold',
+                  outline: 'none',
+                  display: 'inline-block',
+                  textDecoration: 'none',
+                  '&:hover': {
+                    backgroundColor: 'tertiary',
+                    border: '1px solid',
+                    borderColor: 'tertiary'
+                  }
+                }}
+            >
+                Check my CV
+            </a>
+    </div>
+    <div sx={{ marginBottom: '0', backgroundColor: 'primary', }}>
+    <h2 sx={{ 
+      textAlign: "center", 
+      color: 'textSecondary', 
+      marginBottom: '0' 
+    }}>
+      Beyond the code
+    </h2>
+    <div>
+      <BeyondCarousel />
+    </div>
     </div>
   </div>
 );
