@@ -8,7 +8,8 @@ const theme = {
     textSecondary: "#fff", 
     background: '#fff',
     primary: '#0B172A',
-    secondary: '#BC4123'
+    secondary: '#BC4123',
+    tertiary: '#463940', 
   },
   containers: {
     card: {
