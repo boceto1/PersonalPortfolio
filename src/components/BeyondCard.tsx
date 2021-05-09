@@ -6,14 +6,13 @@ interface IProps {
   description: string,
 }
 
-export const BeyondCard:React.FC<IProps> = ({ img, description}) => (
+export const BeyondCard:React.FC<IProps> = ({ img, description }) => (
   <div sx={{ 
     color: 'textSecondary', 
     margin: '1rem', 
     display: 'flex',
     flexFlow: 'column nowrap',
     justifyContent: 'stretch',
-    width: ['100%', '45%', '33%'],
     }}>
     <img 
       src={img} 

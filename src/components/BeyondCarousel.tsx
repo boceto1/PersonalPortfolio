@@ -4,35 +4,50 @@ import { jsx } from "theme-ui";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { BeyondCard } from "./BeyondCard";
 import { activities } from "../data";
+import { useState } from "react";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+
+const responsive = {
+  superLargeDesktop: {
+    breakpoint: { max: 4000, min: 3000 },
+    items: 5,
+  },
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 4,
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 464 },
+    items: 2,
+  },
+  mobile: {
+    breakpoint: { max: 464, min: 0 },
+    items: 1,
+  },
+};
 
 export const BeyondCarousel = () => {
+
   return (
     <div
       sx={{
         margin: "1rem",
-        border: "1px solid white",
-        display: "grid",
-        gridTemplateColumns: "30px 1fr 30px",
         alignItems: "center",
+        marginBottom: '0px'
       }}
     >
-      <FontAwesomeIcon
-        icon={["fas", "chevron-left"]}
-        sx={{ color: "secondary" }}
-        size="2x"
-      />
-      <div sx={{
-        display: 'flex',
-        flexFlow: ['colum nowrap', 'row nowrap', 'row nowrap']}}>
-        {activities.slice(3).map(activity => 
-          <BeyondCard img={activity.path} description={activity.description} />
-        )}
-      </div>
-      <FontAwesomeIcon
-        icon={["fas", "chevron-right"]}
-        sx={{ color: "secondary", marginRight: "10rem" }}
-        size="2x"
-      />
+        <Carousel
+          responsive={responsive}
+          infinite
+        >
+          {activities.map((activity) => (
+            <BeyondCard
+              img={activity.path}
+              description={activity.description}
+            />
+          ))}
+        </Carousel>
     </div>
   );
 };

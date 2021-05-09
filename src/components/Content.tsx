@@ -101,7 +101,8 @@ export const Content: React.FC = () => (
     <h2 sx={{ 
       textAlign: "center", 
       color: 'textSecondary', 
-      marginBottom: '0' 
+      marginBottom: '0',
+      paddingTop: '1rem',
     }}>
       Beyond the code
     </h2>

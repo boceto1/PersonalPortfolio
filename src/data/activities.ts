@@ -31,7 +31,7 @@ export const activities = [
     description: 'Member of ESPE Chorus for 3 years as Tenor',
   },
   {
-    path: `${ACTIVITIES_ROOT_PATH}/coro-original.png`,
+    path: `${ACTIVITIES_ROOT_PATH}/singer-original.png`,
     description: 'Amateur Singer',
   }
 ] as IActivities[];
