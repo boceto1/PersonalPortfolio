@@ -1,12 +1,10 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { jsx } from "theme-ui";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { BeyondCard } from "./BeyondCard";
-import { activities } from "../data";
-import { useState } from "react";
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
+import { jsx } from 'theme-ui';
+import { BeyondCard } from './BeyondCard';
+import { activities } from '../data';
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
 
 const responsive = {
   superLargeDesktop: {
@@ -28,26 +26,23 @@ const responsive = {
 };
 
 export const BeyondCarousel = () => {
-
   return (
     <div
       sx={{
-        margin: "1rem",
-        alignItems: "center",
-        marginBottom: '0px'
+        margin: '1rem',
+        alignItems: 'center',
+        marginBottom: '0px',
       }}
     >
-        <Carousel
-          responsive={responsive}
-          infinite
-        >
-          {activities.map((activity) => (
-            <BeyondCard
-              img={activity.path}
-              description={activity.description}
-            />
-          ))}
-        </Carousel>
+      <Carousel responsive={responsive} infinite>
+        {activities.map(activity => (
+          <BeyondCard
+            key={activity.path}
+            img={activity.path}
+            description={activity.description}
+          />
+        ))}
+      </Carousel>
     </div>
   );
 };

@@ -1,9 +1,9 @@
-import React, { useEffect } from "react";
-import { Header, Content, Footer } from "../components";
+import React, { useEffect } from 'react';
+import { Header, Content, Footer } from '../components';
 
 const Index = () => {
   useEffect(() => {
-    document.title = "Jean Karlo Obando";
+    document.title = 'Jean Karlo Obando';
   }, []);
   return (
     <>

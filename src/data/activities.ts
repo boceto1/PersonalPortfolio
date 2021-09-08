@@ -1,6 +1,6 @@
 interface IActivities {
-  path: string,
-  description: string
+  path: string;
+  description: string;
 }
 
 const ACTIVITIES_ROOT_PATH = 'img/activities';
@@ -33,5 +33,5 @@ export const activities = [
   {
     path: `${ACTIVITIES_ROOT_PATH}/singer-original.png`,
     description: 'Amateur Singer',
-  }
+  },
 ] as IActivities[];

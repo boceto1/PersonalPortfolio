@@ -1,16 +1,16 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { jsx } from "theme-ui";
+import { jsx } from 'theme-ui';
 
 enum SocialNetworkTypes {
-  Instagram = "INSTAGRAM",
-  Github = "GITHUB",
-  LinkedIn = "LINKEDIN",
-  Twitter = "TWITTER",
+  Instagram = 'INSTAGRAM',
+  Github = 'GITHUB',
+  LinkedIn = 'LINKEDIN',
+  Twitter = 'TWITTER',
 }
 
 interface ISocialNetwork {
-  type: "INSTAGRAM" | "GITHUB" | "LINKEDIN" | "TWITTER";
+  type: 'INSTAGRAM' | 'GITHUB' | 'LINKEDIN' | 'TWITTER';
 }
 
 interface ISocialLogo {
@@ -20,11 +20,11 @@ interface ISocialLogo {
 }
 
 const SocialLogo: React.FC<ISocialLogo> = ({ href, src, name }) => (
-  <a href={href} target="_blank">
+  <a href={href} target="_blank" rel="noreferrer">
     <img
       sx={{
-        width: ["1.3rem", "1.5rem"],
-        padding: "0.2rem",
+        width: ['1.3rem', '1.5rem'],
+        padding: '0.2rem',
       }}
       src={src}
       alt={name}
