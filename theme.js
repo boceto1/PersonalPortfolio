@@ -2,6 +2,9 @@ import { roboto } from '@theme-ui/presets'
 
 const theme = {
   ...roboto,
+  fonts: {
+    body: 'Quicksand, sans-serif',
+  },
   colors: {
     ...roboto.colors,
     text: '#0B172A',
