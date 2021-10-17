@@ -1,6 +1,11 @@
 import React from 'react';
+import ReactDOM from 'react-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee, faCaretSquareUp , faCaretSquareDown , faCaretSquareLeft , faCaretSquareRight } from '@fortawesome/free-solid-svg-icons'
 
 import Button from './Button';
+import { faArrowAltCircleDown } from '@fortawesome/free-regular-svg-icons';
+import { Spinner } from '@theme-ui/components';
 
 const ButtonStory = {
   component: Button,
@@ -37,21 +42,27 @@ DefaultButton.args = {
   color: 'blue',
 };
 
-// export const Button1 = () => (
-//   <Button color={'#241011'} width="500px" height="500px" direction={'UP'} />
-// );
+export const element = () => ( 
+  <FontAwesomeIcon icon={ faArrowAltCircleDown } />
+);
+export const element1 = () => ( 
+  <FontAwesomeIcon icon={ faCaretSquareUp } size="xs" />
+);
 
-// export const Button2 = () => (
-//   <Button
-//     color="rgba(36, 16, 17, 1.5)"
-//     width="10px"
-//     height="10px"
-//     direction={'DOWN'}
-//   />
-// );
+export const element2 = () => ( 
+  <FontAwesomeIcon icon={ faCaretSquareDown } />
+);
 
-// export const Button3 = () => (
-//   <Button color={'#241011'} width="7rem" height="7rem" direction={'LEFT'} />
-// );
+export const element3 = () => ( 
+  <FontAwesomeIcon icon={ faCaretSquareLeft } size="6x" />
+);
+
+export const element4 = () => ( 
+  <FontAwesomeIcon
+    icon={ faCaretSquareRight } 
+    color={'#241011'} 
+    size="6x"
+    />
+);
 
 export default ButtonStory;
