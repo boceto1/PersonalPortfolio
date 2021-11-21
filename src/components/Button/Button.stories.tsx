@@ -11,7 +11,7 @@ const ButtonStory = {
   component: Button,
   title: 'Components/Button',
   argTypes: {
-    color: {
+    /*color: {
       control: { type: 'string' },
       defaultValue: 'red',
     },
@@ -26,7 +26,7 @@ const ButtonStory = {
     direction: {
       control: { type: 'string' },
       defaultValue: 'RIGHT',
-    },
+    },*/
   },
 };
 
@@ -39,30 +39,18 @@ const Template = args => <Button {...args} />;
 
 export const DefaultButton = Template.bind({});
 DefaultButton.args = {
-  color: 'blue',
+  color: '#241011',
 };
 
-export const element = () => ( 
-  <FontAwesomeIcon icon={ faArrowAltCircleDown } />
-);
-export const element1 = () => ( 
-  <FontAwesomeIcon icon={ faCaretSquareUp } size="xs" />
-);
-
-export const element2 = () => ( 
-  <FontAwesomeIcon icon={ faCaretSquareDown } />
-);
-
-export const element3 = () => ( 
-  <FontAwesomeIcon icon={ faCaretSquareLeft } size="6x" />
-);
-
+export const DefaultButton1 = Template.bind({});
+DefaultButton1.args = {
+  color: '#241011',
+  width : '150px',
+  height : '150px',
+  direction : 'RIGHT',
+};
 export const element4 = () => ( 
-  <FontAwesomeIcon
-    icon={ faCaretSquareRight } 
-    color={'#241011'} 
-    size="6x"
-    />
+  <FontAwesomeIcon icon={ faCaretSquareRight } color={'#241011'} size="6x"/>
 );
 
 export default ButtonStory;

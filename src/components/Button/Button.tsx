@@ -1,6 +1,9 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
+import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
+import { faPlay } from '@fortawesome/free-solid-svg-icons';
+
 //creacion de tipo
 type IDirection = 'UP' | 'DOWN' | 'LEFT' | 'RIGHT';
 interface IProps {
@@ -9,6 +12,7 @@ interface IProps {
   height?: string;
   direction?: IDirection;
 }
+//se debe trabajar con la interface llamarla a una funcion
 
 const getDirection = (direction: IDirection) => {
   switch (direction) {
@@ -34,29 +38,21 @@ const Button: React.FC<IProps> = ({
   <div
     sx={{
       backgroundColor: color,
+      hover: '#585858',
       width: width,
       height: height,
       borderRadius: 25,
       color: 'white',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      transform: `rotate(${getDirection(direction)}deg)`,
+      cursor: 'pointer',
+      "&:hover": {
+        "backgroundColor": "#585858"},
     }}
   >
-    <div
-      sx={{
-        position: 'absolute',
-        backgroundColor: color,
-        width: 0,
-        height: 0,
-        borderLeft: '40px solid white',
-        borderTop: '20px solid transparent',
-        borderBottom: '20px solid transparent',
-        borderRadius: '5px',
-        /**zIndex: 2,
-         **/
-        left: '45px',
-        top: '45px',
-        transform: `rotate(${getDirection(direction)}deg)`,
-      }}
-    />
+    <Icon icon={faPlay} size="4x" />
   </div>
 );
 
