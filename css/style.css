@@ -264,7 +264,7 @@ footer p {
 		flex: 0 1 20%;
     }
     .col-1-2-3 {
-        flex: 0 1 33%;
+        flex: 0 1 25%;
     }
     header {
         flex-flow: row wrap;
@@ -297,9 +297,6 @@ footer p {
     }
     .skill-card li {
         margin-bottom: 0.2rem;
-    }
-    .jobs {
-        flex-wrap: nowrap;
     }
     /* Display all elements on desktop */
     .activity-card {
