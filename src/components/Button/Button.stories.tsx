@@ -40,14 +40,16 @@ const Template = args => <Button {...args} />;
 export const DefaultButton = Template.bind({});
 DefaultButton.args = {
   color: '#241011',
+  size_b: '6x',
+  //size: '4x',
 };
 
 export const DefaultButton1 = Template.bind({});
 DefaultButton1.args = {
   color: '#241011',
-  width : '150px',
-  height : '150px',
-  direction : 'RIGHT',
+  width: '50px',
+  height: '50px',
+  direction: 'RIGHT',
 };
 export const element4 = () => ( 
   <FontAwesomeIcon icon={ faCaretSquareRight } color={'#241011'} size="6x"/>
